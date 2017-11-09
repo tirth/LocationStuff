@@ -17,5 +17,7 @@ namespace location
         
         public LatLong Home { get; set; }
         public LatLong Work { get; set; }
+        
+        public string FromCmd { get; set; }
     }
 }

@@ -31,6 +31,7 @@ namespace location
 
             foreach (var location in locations)
             {
+                Console.WriteLine($"{location.DateTime}");
                 Console.WriteLine($"{location.Position.DistanceTo(work)}, {location.Position.DistanceTo(home)}");
                 foreach (var activity in location.Activities ?? Enumerable.Empty<Activity>())
                 {
@@ -55,6 +56,7 @@ namespace location
             });
 
             Console.WriteLine($"command line: {test}");
+            _placesConfig.FromCmd = test;
         }
 
         private static IEnumerable<Location> GetLocations()
